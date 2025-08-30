@@ -1,0 +1,91 @@
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  animation: fadeIn var(--transition-base);
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.auth-modal {
+  background: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 440px;
+  box-shadow: var(--shadow-xl);
+  animation: slideUp var(--transition-base);
+  overflow: hidden;
+}
+
+.auth-header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: var(--spacing-xl);
+  text-align: center;
+  color: white;
+}
+
+.auth-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+}
+
+.auth-icon i {
+  font-size: var(--font-size-xl);
+}
+
+.auth-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.auth-subtitle {
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+}
+
+.auth-body {
+  padding: var(--spacing-xl);
+}
+
+.auth-footer {
+  padding: 0 var(--spacing-xl) var(--spacing-xl);
+}
+
+.auth-switch {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-md);
+}
+
+.auth-switch a {
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.modal-actions {
+  text-align: center;
+  margin-top: var(--spacing-md);
+}
